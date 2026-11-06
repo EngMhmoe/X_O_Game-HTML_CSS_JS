@@ -1,11 +1,6 @@
 /* ==============================================================
-   THEME SYSTEM
-   ============================================================== */
-
-/* ==============================================================
    THEME Cyber Neon
    ============================================================== */
-
 :root {
   --bg-primary: #030509;
   --bg-secondary: #070b12;
@@ -40,14 +35,42 @@
 }
 
 /* ==============================================================
-   RESET
+   CUSTOM SCROLLBAR - Cyber Neon
    ============================================================== */
+::-webkit-scrollbar {
+  width: 8px;
+}
 
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+  border-left: 1px solid var(--border);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, var(--x-color), var(--o-color));
+
+  border: 2px solid var(--bg-primary);
+  border-radius: 50px;
+
+  box-shadow: 0 0 10px var(--x-glow);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--x-color);
+  box-shadow:
+    0 0 10px var(--x-color),
+    0 0 20px var(--x-glow);
+}
+
+/* ==============================================================
+RESET
+============================================================== */
 * {
   margin: 0;
   padding: 0;
 
   box-sizing: border-box;
+  scrollbar-color: var(--x-color) var(--bg-primary);
 }
 
 /* ==============================================================
@@ -97,7 +120,6 @@ body {
 /* ==============================================================
    BACKGROUND GLOW
    ============================================================== */
-
 .background-glow {
   position: fixed;
 
@@ -213,11 +235,11 @@ body {
 .brand-small {
   display: block;
 
-  margin-bottom: 3px;
+  margin-bottom: 5px;
 
   color: var(--text-muted);
 
-  font-size: 10px;
+  font-size: 15px;
   font-weight: 700;
 
   letter-spacing: 2px;
@@ -226,8 +248,8 @@ body {
 .brand h1 {
   color: var(--text-primary);
 
-  font-size: 23px;
-  font-weight: 800;
+  font-size: 30px;
+  font-weight: 900;
 
   letter-spacing: -0.8px;
 }
@@ -258,8 +280,8 @@ body {
 
   font-family: inherit;
 
-  font-size: 12px;
-  font-weight: 600;
+  font-size: 20px;
+  font-weight: 900;
 
   cursor: pointer;
 
@@ -277,7 +299,7 @@ body {
 }
 
 .button-icon {
-  font-size: 18px;
+  font-size: 20px;
 
   line-height: 1;
 }
@@ -301,7 +323,6 @@ body {
 /* ==============================================================
    PLAYER CARD
    ============================================================== */
-
 .player-card {
   min-height: 100px;
 
@@ -381,8 +402,8 @@ body {
 
   border-radius: 13px;
 
-  font-size: 21px;
-  font-weight: 800;
+  font-size: 25px;
+  font-weight: 900;
 }
 
 /* ==============================================================
@@ -412,11 +433,11 @@ body {
 .player-label {
   display: block;
 
-  margin-bottom: 3px;
+  margin-bottom: 5px;
 
   color: var(--text-muted);
 
-  font-size: 9px;
+  font-size: 15px;
   font-weight: 700;
 
   letter-spacing: 1.5px;
@@ -440,8 +461,8 @@ body {
 .player-score {
   color: var(--text-primary);
 
-  font-size: 28px;
-  font-weight: 800;
+  font-size: 30px;
+  font-weight: 900;
 }
 
 /* ==============================================================
@@ -451,8 +472,8 @@ body {
 .versus {
   color: var(--text-muted);
 
-  font-size: 10px;
-  font-weight: 800;
+  font-size: 20px;
+  font-weight: 900;
 
   letter-spacing: 1px;
 }
@@ -482,7 +503,7 @@ body {
 
   gap: 8px;
 
-  padding: 7px 13px;
+  padding: 8px 15px;
 
   border: 1px solid var(--border);
 
@@ -492,8 +513,8 @@ body {
 
   color: var(--text-secondary);
 
-  font-size: 11px;
-  font-weight: 500;
+  font-size: 20px;
+  font-weight: 900;
 }
 
 /* ==============================================================
@@ -850,7 +871,7 @@ body {
 .game-footer p {
   color: var(--text-muted);
 
-  font-size: 10px;
+  font-size: 15px;
 }
 
 .game-footer span {
